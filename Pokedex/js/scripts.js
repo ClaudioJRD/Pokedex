@@ -11,8 +11,7 @@ function carregarPokemons(){
 
     }
 
-    pokemons.push(pokemon1)
-
+    
     const pokemon2 =
     {
         id: 2,
@@ -20,8 +19,7 @@ function carregarPokemons(){
         imagem: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png"
     }
 
-    pokemons.push(pokemon2)
-    
+        
     const pokemon3 =    
     {
         id: 3,
@@ -29,7 +27,7 @@ function carregarPokemons(){
         imagem: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png"
 
     }
-    pokemons.push(pokemon3)
+    
 
     const pokemon4 =
     {
@@ -37,7 +35,7 @@ function carregarPokemons(){
         nome: "weezing",
         imagem: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/110.png"
     }
-    pokemons.push(pokemon4)
+    
 
     const pokemon5 = 
     {
@@ -45,8 +43,7 @@ function carregarPokemons(){
         nome:"magikarp",
         imagem: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/129.png"
     }
-    pokemons.push(pokemon5)
-
+    
      
     const pokemon6 =
     {
@@ -54,7 +51,35 @@ function carregarPokemons(){
         nome: "arcanine",
         imagem: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/59.png"
     }
+    pokemons.push(pokemon1)
+    pokemons.push(pokemon2)
+    pokemons.push(pokemon3)
+    pokemons.push(pokemon4)
+    pokemons.push(pokemon5)
     pokemons.push(pokemon6)
 
 
-carregarPokemons()
+
+    for(let index = 0 ; index < pokemons.length; index ++)
+    {
+        const pokemon = pokemons[index]
+        adicionarCardPokemon(pokemon)
+    }
+
+}   
+   
+
+    function adicionarCardPokemon(pokemon)
+    {
+        const imagemElemento = document.createElement("img")
+
+        imagemElemento.setAttribute("src", pokemon.imagem)
+
+        const divElemento = document.getElementById("conteudo-pokemon")
+
+        divElemento.appendChild(imagemElemento)
+
+
+
+    }
+    
